@@ -8,3 +8,11 @@ The [*Arsha template*](https://bootstrapmade.com/arsha-free-bootstrap-html-templ
 - [**License**](https://bootstrapmade.com/license/)
 
 > Visit [**BootstrapMade.com**](https://bootstrapmade.com/) to learn more about the template.
+
+## Getting Started
+
+Start by reading the [documentation](./DOCUMENTATION.md)
+
+## License
+
+Please refer to the [LICENSE](./LICENSE) file for more details.
