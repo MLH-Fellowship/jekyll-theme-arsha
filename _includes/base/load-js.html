@@ -1,0 +1,30 @@
+<!-- Arsha template Vendor JS Files -->
+<script defer src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
+<script defer src="{{ "/assets/vendor/aos/aos.js" | relative_url }}"></script>
+<script defer src="{{ "/assets/vendor/bootstrap/js/bootstrap.bundle.min.js" | relative_url }}"></script>
+<script defer src="{{ "/assets/vendor/glightbox/js/glightbox.min.js" | relative_url }}"></script>
+<script defer src="{{ "/assets/vendor/isotope-layout/isotope.pkgd.min.js" | relative_url }}"></script>
+<script defer src="{{ "/assets/vendor/php-email-form/validate.js" | relative_url }}"></script>
+<script defer src="{{ "/assets/vendor/swiper/swiper-bundle.min.js" | relative_url }}"></script>
+<script defer src="{{ "/assets/vendor/waypoints/noframework.waypoints.js" | relative_url }}"></script>
+<!-- Arsha template Vendor JS Files -->
+
+<!-- Arsha template JS File -->
+<script defer src="{{ "/assets/js/main.js" | relative_url }}"></script>
+<!-- Arsha template JS File -->
+
+<!-- Easter Egg JS -->
+<script type="text/javascript">
+    function easteregg() {
+        var span = document.getElementById('easter-egg');
+        if (span.textContent == 'ö') {
+            span.textContent = 'œ';
+        } else if (span.textContent == 'œ') {
+            span.textContent = 'ö';
+        }
+    }
+</script>
+
+{{ include.content }}
+
+{%- include custom/load-js-extras.html -%}
