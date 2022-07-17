@@ -11,25 +11,25 @@
     <!-- Google Fonts -->
 
     <!-- Arsha template Vendor CSS Files -->
-    <link href="{% link assets/vendor/aos/aos.css %}" rel="stylesheet">
-    <link href="{% link assets/vendor/bootstrap/css/bootstrap.min.css %}" rel="stylesheet">
-    <link href="{% link assets/vendor/bootstrap-icons/bootstrap-icons.css %}" rel="stylesheet">
-    <link href="{% link assets/vendor/boxicons/css/boxicons.min.css %}" rel="stylesheet">
-    <link href="{% link assets/vendor/glightbox/css/glightbox.min.css %}" rel="stylesheet">
-    <link href="{% link assets/vendor/remixicon/remixicon.css %}" rel="stylesheet">
-    <link href="{% link assets/vendor/swiper/swiper-bundle.min.css %}" rel="stylesheet">
+    <link href="{{ "assets/vendor/aos/aos.css" | relative_url }}" rel="stylesheet">
+    <link href="{{ "assets/vendor/bootstrap/css/bootstrap.min.css" | relative_url }}" rel="stylesheet">
+    <link href="{{ "assets/vendor/bootstrap-icons/bootstrap-icons.css" | relative_url }}" rel="stylesheet">
+    <link href="{{ "assets/vendor/boxicons/css/boxicons.min.css" | relative_url }}" rel="stylesheet">
+    <link href="{{ "assets/vendor/glightbox/css/glightbox.min.css" | relative_url }}" rel="stylesheet">
+    <link href="{{ "assets/vendor/remixicon/remixicon.css" | relative_url }}" rel="stylesheet">
+    <link href="{{ "assets/vendor/swiper/swiper-bundle.min.css" | relative_url }}" rel="stylesheet">
     <!-- Arsha template Vendor CSS Files -->
 
     <!-- Arsha template CSS Files -->
-    <link rel="stylesheet" href="{% link assets/css/main.css %}">
+    <link rel="stylesheet" href="{{ "assets/css/main.css" | relative_url }}">
     <!-- Arsha template CSS Files -->
 
     <!-- custom CSS Files -->
-    <link rel="stylesheet" href="{% link assets/css/styles.css %}">
+    <link rel="stylesheet" href="{{ "assets/css/styles.css" | relative_url }}">
     <!-- custom CSS Files -->
 
     <!-- custom SASS styles from _sass/main.scss -->
-    <link rel="stylesheet" href="{% link assets/css/sass.scss %}">
+    <link rel="stylesheet" href="{{ "assets/css/sass.scss" | relative_url }}">
     <!-- custom SASS styles from _sass/main.scss -->
 
     {%- feed_meta -%}
@@ -38,8 +38,8 @@
         {%- include addons/google-analytics.html -%}
     {%- endif -%}
 
-    <link href="{% link assets/img/favicon.png %}" rel="icon">
-    <link href="{% link assets/img/apple-touch-icon.png %}" rel="apple-touch-icon">
+    <link href="{{ "assets/img/favicon.png" | relative_url }}" rel="icon">
+    <link href="{{ "assets/img/apple-touch-icon.png" | relative_url }}" rel="apple-touch-icon">
 
     {{ include.content }}
     {%- include custom/head-extras.html -%}
