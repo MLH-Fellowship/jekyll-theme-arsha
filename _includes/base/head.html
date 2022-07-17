@@ -29,7 +29,8 @@
     <!-- custom CSS Files -->
 
     <!-- custom SASS styles from _sass/main.scss -->
-    <link rel="stylesheet" href="{{ "assets/css/sass.scss" | relative_url }}">
+    <link rel="stylesheet"
+          href="{% capture url %}{% link assets/css/sass.scss %}{% endcapture %}{{ url | relative_url }}">
     <!-- custom SASS styles from _sass/main.scss -->
 
     {%- feed_meta -%}
