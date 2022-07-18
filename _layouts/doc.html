@@ -8,11 +8,15 @@
 
 <body id="body" class="light">
 {% include base/navbar.html %}
-{% include doc/sidebar.html %}
-<section id="wiki-main">
-    {{ content }}
-    {% include doc/contributing.html %}
-</section>
+<aside>
+    {% include doc/sidebar.html %}
+</aside>
+<main id="main">
+    <section id="wiki-main">
+        {{ content }}
+        {% include doc/contributing.html %}
+    </section>
+</main>
 {% include base/footer.html %}
 {% capture load-js-extras %}
     <script type="text/javascript">
