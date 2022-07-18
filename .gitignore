@@ -69,7 +69,6 @@ __pycache__/
 
 # Distribution / packaging
 .Python
-build/
 develop-eggs/
 dist/
 downloads/
@@ -392,10 +391,17 @@ tmp.*
 ##### tmps #####
 
 
-##### Jekyll #####
+##### Jekyll Site #####
 _site
 .sass-cache
 .jekyll-cache
 .jekyll-metadata
 vendor
-##### Jekyll #####
+!assets/vendor
+##### Jekyll Site #####
+
+
+##### Jekyll Theme & Gem #####
+.bundle
+Gemfile.lock
+##### Jekyll Theme #####
