@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="{{ page.lang | default: site.lang | default: "en-US" }}">
 
 {% include base/head.html content=head-extras %}
 
 <body>
-{% include home/navbar.html %}
+{% include base/navbar.html %}
 {{ content }}
 {% include base/footer.html %}
 {% include base/load-js.html content=load-js-extras %}
