@@ -58,3 +58,5 @@ exclude:
   - DOCUMENTATION.md
   - README.md
   - LICENSE
+  - Gemfile
+  - Gemfile.lock
