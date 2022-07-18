@@ -1,6 +1,22 @@
+##### Theme settings - will be applied before copying .scss files into site #####
+sass:
+  style: compressed
+##### Theme settings - will be applied before copying .scss files into site  #####
+
+
+##### Theme plugins - should be installed manually in the site to use the theme #####
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-relative-links
+##### Theme plugins - should be installed manually in the site to use the theme #####
+
+
+##### Site config - won't be loaded when using the theme, you should have something similar in your site #####
+
 #> metadata #
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/jekyll-theme-arsha"
+url: "https://mlh-fellowship.github.io"
 
 title: ILGPU - A Modern GPU Compiler for .Net Programs
 email: ilgpucompiler@gmail.com
@@ -13,15 +29,12 @@ social_links:
 gh_contribute_base: 'master/docs/'
 #< metadata #
 
-
 #> permalinks and default layouts #
 permalink: pretty # remove .html extension from permalinks
-
 collections:
   docs:
     output: true # telling Jekyll to render _docs/ and generate pages
     permalink: /:collection/:title/
-
 defaults: # adding default layouts
   - scope:
       path: ""
@@ -35,7 +48,6 @@ defaults: # adding default layouts
       layout: "doc"
 #< permalinks and default layouts #
 
-
 #> jekyll-relative-links #
 relative_links:
   enabled: true
@@ -44,15 +56,6 @@ relative_links:
     - DOCUMENTATION.md
 #< jekyll-relative-links #
 
-
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
-  - jekyll-relative-links
-
-sass:
-  style: compressed
-
 exclude:
   - jekyll-theme-arsha.gemspec
   - DOCUMENTATION.md
@@ -60,3 +63,5 @@ exclude:
   - LICENSE
   - Gemfile
   - Gemfile.lock
+
+##### Site config - won't be loaded when using the theme, you should have something similar in your site #####
