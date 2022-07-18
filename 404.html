@@ -1,0 +1,36 @@
+---
+layout: page
+permalink: /404.html
+---
+
+<main id="main">
+    <section class="inner-page">
+        <div class="container" data-aos="fade-up">
+            <div class="section-title">
+                <h2>Page not found :(</h2>
+            </div>
+            <div class="row text-center">
+                <p>The requested page could not be found.</p>
+            </div>
+        </div>
+    </section>
+    <section id="related" class="pricing">
+        <div class="container" data-aos="fade-up">
+            <div class="related row">
+                <div class="section-title">
+                    <h2>More News</h2>
+                </div>
+                {% for post in site.posts limit: 3 %}
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="box">
+                            <h5>{{ post.title }}</h5>
+                            <p class="excerpt">{{ post.excerpt | strip_html }}</p>
+                            <br><br>
+                            <a href="{{ post.url | relative_url }}" class="buy-btn">Full Article</a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+</main><!-- End #main -->
