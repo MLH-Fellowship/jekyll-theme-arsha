@@ -27,6 +27,8 @@ social_links:
   github: https://github.com/m4rs-mt/ILGPU
   discord: https://discord.com/invite/X6RBCff
 gh_contribute_base: 'master/docs/'
+
+theme_switcher: true # enable theme switcher on docs pages
 #< metadata #
 
 #> permalinks and default layouts #
