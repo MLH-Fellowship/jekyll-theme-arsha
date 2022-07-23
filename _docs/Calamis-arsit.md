@@ -65,3 +65,13 @@ omnes membra fontibus, in Ceae totum haut donec castra manibus: plus nec!
 Adsiduae omne enim. Multo non [coniugium longe
 proxima](http://eripuit.com/formosus) defodit harenam rabies sol ignibus **pinu
 atque**!
+
+## Table
+
+| Priority apples | Second priority | Third priority |
+|-------|--------|---------|
+| ambrosia | gala | red delicious |
+| pink lady | jazz | macintosh |
+| honeycrisp | granny smith | fuji |
+
+
