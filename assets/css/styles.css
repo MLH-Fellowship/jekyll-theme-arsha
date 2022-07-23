@@ -16,7 +16,7 @@
 }
 
 .logo:after {
-    content: url("{{ "/assets/img/ilgpu-logo-light.svg" | relative_url }}");
+    content: url("{{ "/assets/img/logo-light.svg" | relative_url }}");
 }
 
 .navbar a {

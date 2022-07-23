@@ -18,6 +18,7 @@ plugins:
 baseurl: "/jekyll-theme-arsha"
 url: "https://mlh-fellowship.github.io"
 
+name: ILGPU
 title: ILGPU - A Modern GPU Compiler for .Net Programs
 email: ilgpucompiler@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
@@ -27,6 +28,8 @@ social_links:
   github: https://github.com/m4rs-mt/ILGPU
   discord: https://discord.com/invite/X6RBCff
 gh_contribute_base: 'master/docs/'
+
+theme_switcher: true # enable theme switcher on docs pages
 #< metadata #
 
 #> permalinks and default layouts #

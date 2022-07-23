@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en-US" }}">
 
-{% capture head-extras %}
-    <link rel="stylesheet" href="{{ "/assets/css/theme-switcher.css" | relative_url }}">
-{% endcapture %}
+{% if site.theme_switcher %}
+    {% capture head-extras %}
+        <link rel="stylesheet" href="{{ "/assets/css/theme-switcher.css" | relative_url }}">
+    {% endcapture %}
+{% else %}
+    {% capture head-extras %}{% endcapture %}
+{% endif %}
 {% include base/head.html content=head-extras %}
 
 <body id="body" class="light">
@@ -17,32 +21,37 @@
         {% include doc/contributing.html %}
     </section>
 </main>
+
 {% include base/footer.html %}
-{% capture load-js-extras %}
-    <script type="text/javascript">
-        // Set the theme from localStorage(if exist) || or set default light
-        let theme = window.localStorage.getItem('theme') || 'light';
-        // Activate the current theme (using class)
-        const body = document.getElementById('body');
-        body.classList = theme;
-        // Available Themes
-        let available_themes = document.querySelectorAll('[dd-theme]');
-        // Toggle Dark / Light theme
-        let _toggler = document.querySelector('[dd-toggle]');
-        _toggler.addEventListener('click', toggleTheme);
-
-        // Function: toggle theme(light & dark)
-        function toggleTheme() {
-            // Toggle light / dark theme
-            theme = theme === 'light' ? 'dark' : 'light';
-            // Apply class to body
+{% if site.theme_switcher %}
+    {% capture load-js-extras %}
+        <script type="text/javascript">
+            // Set the theme from localStorage(if exist) || or set default light
+            let theme = window.localStorage.getItem('theme') || 'light';
+            // Activate the current theme (using class)
+            const body = document.getElementById('body');
             body.classList = theme;
-            // Store theme var to localStorage
-            window.localStorage.setItem('theme', theme);
-        }
-    </script>
-{% endcapture %}
-{% include base/load-js.html content=load-js-extras %}
-</body>
+            // Available Themes
+            let available_themes = document.querySelectorAll('[dd-theme]');
+            // Toggle Dark / Light theme
+            let _toggler = document.querySelector('[dd-toggle]');
+            _toggler.addEventListener('click', toggleTheme);
 
+            // Function: toggle theme(light & dark)
+            function toggleTheme() {
+                // Toggle light / dark theme
+                theme = theme === 'light' ? 'dark' : 'light';
+                // Apply class to body
+                body.classList = theme;
+                // Store theme var to localStorage
+                window.localStorage.setItem('theme', theme);
+            }
+        </script>
+    {% endcapture %}
+{% else %}
+    {% capture load-js-extras %}{% endcapture %}
+{% endif %}
+{% include base/load-js.html content=load-js-extras %}
+
+</body>
 </html>
