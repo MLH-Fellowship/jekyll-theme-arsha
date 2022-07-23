@@ -18,6 +18,7 @@ plugins:
 baseurl: "/jekyll-theme-arsha"
 url: "https://mlh-fellowship.github.io"
 
+name: ILGPU
 title: ILGPU - A Modern GPU Compiler for .Net Programs
 email: ilgpucompiler@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"

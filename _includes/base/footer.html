@@ -4,7 +4,9 @@
         <div>
             &copy; Copyright
             <script type="text/javascript">document.write(String(new Date().getFullYear()));</script>
-            <span>ILGPU</span>. All Rights Reserved.
+            {% if site.name %}
+                <span>{{ site.name | default: '' }}</span>.
+            {% endif %} All Rights Reserved.
         </div>
     </div>
 </footer><!-- End Footer -->
