@@ -1,50 +1,51 @@
-<!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en-US" }}">
+---
+layout: default
+---
 
-{% include base/head.html %}
-
-<body class="news">
-{% include base/navbar.html %}
 <main id="main">
-    <section class="inner-page">
-        <div class="container" data-aos="fade-up">
-            {% assign check = page.path | split: '.' | last %}
-            {% if check == "html" %}
-                {{ content }}
-            {% else %}
-                <div class="section-title">
-                    <h2>{{ page.title }}</h2>
-                </div>
-                <div class="row">
-                    {{ content }}
-                </div>
-            {% endif %}
-        </div>
-    </section>
-    <section id="related" class="pricing">
-        <div class="container" data-aos="fade-up">
-            <div class="related row">
-                <div class="section-title">
-                    <h2>More News</h2>
-                </div>
-                {% for post in site.posts limit: 3 %}
-                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                        <div class="box">
-                            <h5>{{ post.title }}</h5>
-                            <p class="excerpt">{{ post.excerpt | strip_html }}</p>
-                            <br><br>
-                            <a href="{{ post.url | relative_url }}" class="buy-btn">Full Article</a>
+    {% include arsha/breadcrumbs.html subpage="Portfolio Details" title=page.title %}
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-8">
+                    <div class="portfolio-details-slider swiper">
+                        <div class="swiper-wrapper align-items-center">
+                            <div class="swiper-slide">
+                                <img src="{{ page.featured_image | default: "assets/img/placeholder.jpg" | relative_url }}"
+                                     alt="Portfolio">
+                            </div>
+                            {% for img_url in page.images %}
+                                <div class="swiper-slide">
+                                    <img src="{{ img_url | relative_url }}" alt="Portfolio">
+                                </div>
+                            {% endfor %}
                         </div>
+                        <div class="swiper-pagination"></div>
                     </div>
-                {% endfor %}
+                </div>
+                <div class="col-lg-4">
+                    <div class="portfolio-info">
+                        <h3>Project information</h3>
+                        <ul>
+                            <li><strong>Category</strong>: {{ page.categories | default: "N/A" }}</li>
+                            <li><strong>Client</strong>: {{ page.client | default: "N/A" }}</li>
+                            <li><strong>Project date</strong>: {{ page.date | date: "%d %B, %Y" | default: "N/A" }}</li>
+                            <li><strong>Project URL</strong>: <a {% if page.external_url %}target="_blank"{% endif %}
+                                                                 href="{{ page.external_url | default: "#" }}">{{ page.external_url | default: "N/A" }}</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="portfolio-description">
+                        {{ content }}
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
+    </section><!-- End Portfolio Details Section -->
 </main><!-- End #main -->
-<div style="flex-grow:1"></div> <!-- Fill page -->
 
-{% include base/footer.html %}
-{% include base/load-js.html %}
-</body>
-
-</html>
+{%- if jekyll.environment == 'production' and site.disqus.shortname -%}
+    {%- include addons/disqus.html -%}
+{%- endif -%}

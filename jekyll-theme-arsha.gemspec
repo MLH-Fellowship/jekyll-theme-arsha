@@ -2,12 +2,12 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-theme-arsha"
-  spec.version       = "0.1.0"
+  spec.version       = "0.2.0"
 
   spec.authors       = ["Mehdi Nassim KHODJA"]
   spec.email         = ["18899702+naskio@users.noreply.github.com"]
 
-  spec.summary       = "Arsha template published as a Jekyll-Theme"
+  spec.summary       = "Arsha template published as a Jekyll-Theme upgraded to latest version v4.8.0 with Bootstrap 5.2.0"
   spec.metadata["plugin_type"] = "theme"
   spec.platform      = Gem::Platform::RUBY
   spec.homepage      = "https://github.com/MLH-Fellowship/jekyll-theme-arsha"

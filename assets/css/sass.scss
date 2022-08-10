@@ -1,5 +1,23 @@
 ---
-# The empty front matter at the top tells Jekyll it needs to process the file.
+# this ensures Jekyll reads the file to be transformed into CSS later
+# only Main files contain this front matter, not partials.
+#
+# The empty front matter at the top tells Jekyll it needs to process the file (needed for loading SASS).
+# This file is used to load all SASS files.
+# We can use Liquid here to addded dynamic content to SASS files.
 ---
 
-@import "main";
+// loading partials from _sass/
+@import 'colors';
+@import 'override-colors';
+@import "styles";
+
+/* dynamic content: Liquid template */
+
+.cta {
+  background: linear-gradient($headerColor, $headerColor), url('{{ "assets/img/cta-bg.jpg" | relative_url }}') fixed center center;
+}
+/* dynamic content: Liquid template */
+
+// loading partials from _sass/
+@import 'extras-styles';

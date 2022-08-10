@@ -2,15 +2,17 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ site.title | default: "" }}</title>
+
+    {% if include.title %}<title>{{ site.title | default: "" }} - {{ include.title }}</title>{% endif %}
+
     {%- seo -%}
 
-    <!-- Google Fonts -->
+    <!-- ARSHA Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
           rel="stylesheet">
-    <!-- Google Fonts -->
+    <!-- ARSHA Google Fonts -->
 
-    <!-- Arsha template Vendor CSS Files -->
+    <!-- ARSHA Vendor CSS Files -->
     <link href="{{ "assets/vendor/aos/aos.css" | relative_url }}" rel="stylesheet">
     <link href="{{ "assets/vendor/bootstrap/css/bootstrap.min.css" | relative_url }}" rel="stylesheet">
     <link href="{{ "assets/vendor/bootstrap-icons/bootstrap-icons.css" | relative_url }}" rel="stylesheet">
@@ -18,20 +20,20 @@
     <link href="{{ "assets/vendor/glightbox/css/glightbox.min.css" | relative_url }}" rel="stylesheet">
     <link href="{{ "assets/vendor/remixicon/remixicon.css" | relative_url }}" rel="stylesheet">
     <link href="{{ "assets/vendor/swiper/swiper-bundle.min.css" | relative_url }}" rel="stylesheet">
-    <!-- Arsha template Vendor CSS Files -->
+    <!-- ARSHA Vendor CSS Files -->
 
-    <!-- Arsha template CSS Files -->
-    <link rel="stylesheet" href="{{ "assets/css/main.css" | relative_url }}">
-    <!-- Arsha template CSS Files -->
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="{{ "assets/css/normalize.css" | relative_url }}">
+    <!-- Normalize CSS -->
 
-    <!-- custom CSS Files -->
-    <link rel="stylesheet" href="{{ "assets/css/styles.css" | relative_url }}">
-    <!-- custom CSS Files -->
-
-    <!-- custom SASS styles from _sass/main.scss -->
+    <!-- ARSHA Template Main CSS File -->
     <link rel="stylesheet"
           href="{% capture url %}{% link assets/css/sass.scss %}{% endcapture %}{{ url | relative_url }}">
-    <!-- custom SASS styles from _sass/main.scss -->
+    <!-- ARSHA Template Main CSS File -->
+
+    <!-- custom CSS Files -->
+    <link rel="stylesheet" href="{{ "assets/css/custom.css" | relative_url }}">
+    <!-- custom CSS Files -->
 
     {%- feed_meta -%}
 
@@ -39,10 +41,14 @@
         {%- include addons/google-analytics.html -%}
     {%- endif -%}
 
-    <link href="{{ "assets/img/favicon.png" | relative_url }}" rel="icon">
-    <link href="{{ "assets/img/apple-touch-icon.png" | relative_url }}" rel="apple-touch-icon">
+    {%- include site-extras-head.html -%}
 
-    {{ include.content }}
-    {%- include custom/head-extras.html -%}
+    {% if layout.extras-head %}
+        {% include {{ layout.extras-head }} %}
+    {% endif %}
+
+    {% if page.extras-head %}
+        {% include {{ page.extras-head }} %}
+    {% endif %}
 
 </head>

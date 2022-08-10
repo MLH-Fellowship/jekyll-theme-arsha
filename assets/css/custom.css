@@ -1,0 +1,21 @@
+/**
+* Customize the theme as you wish.
+*/
+
+#footer .footer-bottom .social-links a {
+    font-size: 32px;
+    display: inline-block;
+    color: #47b2e4;
+    padding: 8px 0;
+    margin-right: 4px;
+    border-radius: 50%;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+}
+
+#footer .footer-bottom .social-links a:hover {
+    color: #209dd8;
+    text-decoration: none;
+}

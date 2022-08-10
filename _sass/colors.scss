@@ -1,0 +1,39 @@
+// _sass/ folder isn't processed by Jekyll and shouldn't have a Front-Matter => we can't use Liquid here
+
+// This is a partial.
+// It lies in <source>/_sass, just waiting to be imported.
+// It does not contain the YAML front matter and has no corresponding output file in the built site.
+
+$primaryColorDark: #0c3c53;
+$primaryColor: #37517e;
+$primaryColorLight: #4668a2;
+$primaryColorLighter: #6182ba;
+
+$secondaryColor: #47b2e4;
+$secondaryColorDark: #23a3df;
+$secondaryColorDarker: #209dd8;
+
+$whiteColor: #ffffff;
+$backgroundColor: #f3f5fa;
+
+$greyColorDarker: #343a40;
+$greyColorDark: #444444;
+$greyColor: #5e5e5e;
+$greyColorLight: #777777;
+$greyColorLighter: #848484;
+
+$successColorDark: #28a745;
+$successColor: #18d26e;
+
+$errorColor: #ed3c0d;
+$errorColorDark: red;
+
+$headerColor: rgba(40, 58, 90, 0.9);
+
+$ctaButtonHover: #31a9e1;
+$linksHover: #73c5eb;
+$bttButtonHover: #6bc1e9;
+$contactSectionBackground: #e7f5fb;
+$progressBarBackground: #e8edf5;
+$portfolioItemBackground: #f9fcfe;
+$teamMemberBackground: #eff2f8;
