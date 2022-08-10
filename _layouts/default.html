@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en-US" }}">
 
-{% include base/head.html content=head-extras %}
+{% include base/head.html %}
 
 <body>
-{% include base/navbar.html %}
+{% include header.html %}
 {{ content }}
-{% include base/footer.html %}
-{% include base/load-js.html content=load-js-extras %}
+{% include footer.html %}
+{% include arsha/preloader.html %}
+{% include arsha/go-to-top.html %}
+{% include base/load-js.html %}
 </body>
 
 </html>

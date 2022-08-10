@@ -1,0 +1,6 @@
+<div class="social-links">
+    {% for social in site.social_links %}
+        <a href="{{ social[1] | default: "#" }}" class="{{ social[0] | default: "" }}">
+                <i class="bx bxl-{{ social[0] | default: "" }}"></i></a>
+    {% endfor %}
+</div>

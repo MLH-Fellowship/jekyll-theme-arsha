@@ -6,6 +6,7 @@ The [*Arsha template*](https://bootstrapmade.com/arsha-free-bootstrap-html-templ
 - [**Template URL**](https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/)
 - **Author**: BootstrapMade.com
 - [**License**](https://bootstrapmade.com/license/)
+- **Version**: Arsha v4.8.0, Bootstrap v5.2.0
 
 > Visit [**BootstrapMade.com**](https://bootstrapmade.com/) to learn more about the template.
 

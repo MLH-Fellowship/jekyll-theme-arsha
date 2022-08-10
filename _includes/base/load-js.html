@@ -1,30 +1,24 @@
-<!-- Arsha template Vendor JS Files -->
+<!-- ARSHA Vendor JS Files -->
 <script defer src="{{ "assets/vendor/aos/aos.js" | relative_url }}"></script>
 <script defer src="{{ "assets/vendor/bootstrap/js/bootstrap.bundle.min.js" | relative_url }}"></script>
 <script defer src="{{ "assets/vendor/glightbox/js/glightbox.min.js" | relative_url }}"></script>
 <script defer src="{{ "assets/vendor/isotope-layout/isotope.pkgd.min.js" | relative_url }}"></script>
-<script defer src="{{ "assets/vendor/php-email-form/validate.js" | relative_url }}"></script>
 <script defer src="{{ "assets/vendor/swiper/swiper-bundle.min.js" | relative_url }}"></script>
 <script defer src="{{ "assets/vendor/waypoints/noframework.waypoints.js" | relative_url }}"></script>
-<script defer src="{{ "assets/vendor/boxicons/boxicons.js" | relative_url }}"></script>
-<!-- Arsha template Vendor JS Files -->
+<script defer src="{{ "assets/vendor/php-email-form/validate.js" | relative_url }}"></script>
+<!-- ARSHA Vendor JS Files -->
 
-<!-- Arsha template JS File -->
+<!-- ARSHA Template Main JS File -->
 <script defer src="{{ "assets/js/main.js" | relative_url }}"></script>
-<!-- Arsha template JS File -->
+<!-- ARSHA Template Main JS File -->
 
-<!-- Easter Egg JS -->
-<script type="text/javascript">
-    function easteregg() {
-        const span = document.getElementById('easter-egg');
-        if (span.textContent === 'ö') {
-            span.textContent = 'œ';
-        } else if (span.textContent === 'œ') {
-            span.textContent = 'ö';
-        }
-    }
-</script>
+{%- include site-extras-js.html -%}
 
-{{ include.content }}
 
-{%- include custom/load-js-extras.html -%}
+{% if layout.extras-js %}
+    {% include {{ layout.extras-js }} %}
+{% endif %}
+
+{% if page.extras-js %}
+    {% include {{ page.extras-js }} %}
+{% endif %}

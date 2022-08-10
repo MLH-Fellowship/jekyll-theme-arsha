@@ -18,43 +18,36 @@ plugins:
 baseurl: "/jekyll-theme-arsha"
 url: "https://mlh-fellowship.github.io"
 
-name: ILGPU
-title: ILGPU - A Modern GPU Compiler for .Net Programs
-email: ilgpucompiler@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  A modern, lightweight & fast GPU compiler for high-performance .Net programs.
+name: Arsha
+title: Arsha Bootstrap Template
+email: hi@nask.io
+# logo: assets/img/logo.png # you can specify a logo for your site
+description: >- # this means to ignore newlines until "X:"
+  Arsha is a clean and modern business Bootstrap template designed specifically for startup, apps and IT services. 
+  You will be able to showcase your content on mobile devices such as smartphones, tablets and all types of devices. 
+  Arsha’s design is driven by minimalist and unique sections. 
+  With this template pixel-perfect layout and neat sectioning, it will help you create a professional-looking website for your business in no time.
 
 social_links:
-  github: https://github.com/m4rs-mt/ILGPU
-  discord: https://discord.com/invite/X6RBCff
-gh_contribute_base: 'master/docs/'
-
-theme_switcher: true # enable theme switcher on docs pages
+  github: https://github.com/MLH-fellowship/jekyll-theme-arsha
+  discord: "#"
+  twitter: "#"
 #< metadata #
 
 #> permalinks and default layouts #
 permalink: pretty # remove .html extension from permalinks
-collections:
-  docs:
-    output: true # telling Jekyll to render _docs/ and generate pages
-    permalink: /:collection/:title/
 defaults: # adding default layouts
   - scope:
       path: ""
       type: "posts"
     values:
       layout: "post"
-  - scope:
-      path: ""
-      type: "docs"
-    values:
-      layout: "doc"
+      permalink: /portfolio/:year/:title/
 #< permalinks and default layouts #
 
 #> jekyll-relative-links #
 relative_links:
   enabled: true
-  collections: true # set to true for processing _docs/
   exclude:
     - DOCUMENTATION.md
 #< jekyll-relative-links #

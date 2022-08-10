@@ -1,0 +1,13 @@
+{% capture url %}{% link index.html %}{% endcapture %}
+{% assign index_url = url | relative_url %}
+
+<!-- ======= Breadcrumbs ======= -->
+<section id="breadcrumbs" class="breadcrumbs">
+    <div class="container">
+        <ol>
+            <li><a href="{{ index_url }}">Home</a></li>
+            <li>{{ include.subpage }}</li>
+        </ol>
+        <h2>{{ include.title }}</h2>
+    </div>
+</section><!-- End Breadcrumbs -->

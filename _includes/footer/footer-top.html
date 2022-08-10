@@ -1,0 +1,46 @@
+<div class="footer-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 footer-contact">
+                <h3>{{ site.name }}</h3>
+                <p>
+                    A108 Adam Street <br>
+                    New York, NY 535022<br>
+                    United States <br><br>
+                    <strong>Phone:</strong> +1 5589 55488 55<br>
+                    <strong>Email:</strong> {{ site.email | default: "N/A" }}<br>
+                </p>
+            </div>
+
+            <div class="col-lg-3 col-md-6 footer-links">
+                <h4>Useful Links</h4>
+                <ul>
+                    <li><i class="bx bx-chevron-right"></i> <a href="{{ '#hero' | relative_url }}">Home</a></li>
+                    <li><i class="bx bx-chevron-right"></i> <a href="{{ '#about' | relative_url }}">About us</a></li>
+                    <li><i class="bx bx-chevron-right"></i> <a href="{{ '#services' | relative_url }}">Services</a></li>
+                    <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+                    <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6 footer-links">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><i class="bx bx-chevron-right"></i> <a href="{{ '#services' | relative_url }}">Web Design</a></li>
+                    <li><i class="bx bx-chevron-right"></i> <a href="{{ '#services' | relative_url }}">Web Development</a></li>
+                    <li><i class="bx bx-chevron-right"></i> <a href="{{ '#services' | relative_url }}">Product Management</a></li>
+                    <li><i class="bx bx-chevron-right"></i> <a href="{{ '#services' | relative_url }}">Marketing</a></li>
+                    <li><i class="bx bx-chevron-right"></i> <a href="{{ '#services' | relative_url }}">Graphic Design</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6 footer-links">
+                <h4>Our Social Networks</h4>
+                <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+                <div class="mt-3">
+                    {% include addons/social-links.html %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
