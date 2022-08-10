@@ -1,36 +1,17 @@
 ---
 layout: page
 permalink: /404.html
+title: Not Found
 ---
 
-<main id="main">
-    <section class="inner-page">
-        <div class="container" data-aos="fade-up">
-            <div class="section-title">
-                <h2>Page not found :(</h2>
-            </div>
-            <div class="row text-center">
-                <p>The requested page could not be found.</p>
-            </div>
+<!-- ======= Inner Page Section ======= -->
+<section class="inner-page">
+    <div class="container">
+        <div class="text-center">
+            <h1>404</h1>
+
+            <p><strong>Page not found :(</strong></p>
+            <p>The requested page could not be found.</p>
         </div>
-    </section>
-    <section id="related" class="pricing">
-        <div class="container" data-aos="fade-up">
-            <div class="related row">
-                <div class="section-title">
-                    <h2>More News</h2>
-                </div>
-                {% for post in site.posts limit: 3 %}
-                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                        <div class="box">
-                            <h5>{{ post.title }}</h5>
-                            <p class="excerpt">{{ post.excerpt | strip_html }}</p>
-                            <br><br>
-                            <a href="{{ post.url | relative_url }}" class="buy-btn">Full Article</a>
-                        </div>
-                    </div>
-                {% endfor %}
-            </div>
-        </div>
-    </section>
-</main><!-- End #main -->
+    </div>
+</section><!-- End Inner Page Section -->
