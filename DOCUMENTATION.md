@@ -173,6 +173,18 @@ permalink: /welcome-to-jekyll or welcome-to-jekyll or /welcome-to-jekyll.html or
 - [Using Bundler while developing a gem](https://bundler.io/guides/rubygems.html)
 - [Jekyll Themes](https://jekyllrb.com/docs/themes/)
 
+## Upgrading the template
+
+Mapping between files (template => theme)
+
+- `assets/js` => `assets/js`
+- `assets/img/*` => `assets/img/*`
+- `assets/vendor/*` => `assets/vendor/*`
+- `assets/css/style.css` => `_sass/styles.scss`, `_sass/colors.scss`, `assets/css/sass.scss`
+- `index.html` => `index.html`, `_includes/`
+- `portfolio-details.html` => `_layouts/post.html`
+- `inner-page.html` => `_layouts/page.html`
+
 ## Contributing
 
 Bug reports and pull requests are welcome
