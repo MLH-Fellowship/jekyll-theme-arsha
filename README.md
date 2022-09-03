@@ -12,7 +12,13 @@ The [*Arsha template*](https://bootstrapmade.com/arsha-free-bootstrap-html-templ
 
 ## Getting Started
 
-Start by reading the [documentation](./DOCUMENTATION.md)
+### Usage
+
+Refer to the [Usage Guide](./USAGE.md) to get started using the theme.
+
+### Development
+
+Refer to the [Development Guide](./DEVELOPMENT.md) if you are willing to contribute.
 
 ## License
 
