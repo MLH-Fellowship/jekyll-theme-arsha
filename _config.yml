@@ -49,15 +49,18 @@ defaults: # adding default layouts
 relative_links:
   enabled: true
   exclude:
-    - DOCUMENTATION.md
+    - USAGE.md
+    - DEVELOPMENT.md
 #< jekyll-relative-links #
 
 exclude:
   - jekyll-theme-arsha.gemspec
-  - DOCUMENTATION.md
+  - USAGE.md
+  - DEVELOPMENT.md
   - README.md
   - LICENSE
   - Gemfile
   - Gemfile.lock
+  - .gitignore
 
 ##### Site config - won't be loaded when using the theme, you should have something similar in your site #####

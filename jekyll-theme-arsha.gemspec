@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/MLH-Fellowship/jekyll-theme-arsha"
 
   spec.license       = "Nonstandard"
-  spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_layouts|_includes|_sass|LICENSE|README.md|DOCUMENTATION.md|_config\.yml)!i) }
+  spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_layouts|_includes|_sass|LICENSE|README.md|USAGE.md|DEVELOPMENT.md|_config\.yml)!i) }
 
   spec.required_ruby_version = ">= 2.5.0"
 
