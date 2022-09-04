@@ -5,7 +5,7 @@ tag: app
 external_url: https://www.portfolio.com/portfolio-details
 client: ASU Company
 images: [ "assets/img/portfolio/portfolio-1.jpg", "assets/img/portfolio/portfolio-2.jpg", "assets/img/portfolio/portfolio-3.jpg"]
-featured_image: assets/img/portfolio/portfolio-1.jpg
+featured_image: assets/img/portfolio/portfolio-2.jpg
 ---
 
 ## This is an example of portfolio detail - general
